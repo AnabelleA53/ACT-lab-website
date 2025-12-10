@@ -4,12 +4,13 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
 }
 
 .topnav {
     height: 20px;
     width: 100%;
-    padding: 15px 20px;
+    padding: 15px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -18,7 +19,7 @@ body {
     padding: 0px 20px;
     color: black;
     text-decoration: none;
-    
+    margin-right: 40px;
 }
 
 
@@ -28,6 +29,10 @@ body {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
+
+
+/* styling for main content section of index page */
 
 .index-main {
     flex: 1;
@@ -97,14 +102,27 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 10px;
     text-align: center;
-    gap: 8px; /* spacing between image, title, creator */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 200px; 
+    height: auto; 
+    max-height: 225px;
     object-fit: cover; 
     border-radius: 6px;
+}
+.project-title {
+    display: block;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.project-creator{
+    padding-bottom: 10px;
 }
 
 
@@ -131,24 +149,71 @@ body {
 }
 
 .proj-main {
-    flex: 1;
     display: grid;
     grid-template-columns: 6fr 4fr;
     gap: 20px;
-    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+.leftsection{
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.rightsection{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 2px 0;
 }
 
 /* styling for image preview */
 
 .main-slider {
+    padding: 15px;
     position: relative;
     width: 100%;
+    height: 500px;
     margin: auto;
     overflow: hidden;
-
 }
 
 .main-slider img{
     width: 500px;
+    height:auto;
     display: none;
+    margin: auto;
+}
+
+img.displaySlide{
+    display: block;
+}
+
+.main-slider button{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.prev{
+    left: 20px;
+}
+
+.next{
+    right: 20px;
+}
+
+.remixes {
+    padding: 15px;
+    gap: 40px; 
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: auto;
 }

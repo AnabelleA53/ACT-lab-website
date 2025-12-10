@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="topnav">
-            Knitbase
+            Knitrepo
             <a href="">Home</a> <!-- need to add actual pages -->
             <a href="">About Us</a>
             <a href="">Contact</a>
@@ -19,21 +19,64 @@
             <div class="leftsection"> <!-- section for pictures -->
                 <div class="main-slider"> <!-- project photos div element -->
                     <div class="slides"> <!-- each photo -->
-                        <img class="slide" src="" alt="Image 1">
-                        <img class="slide" src="" alt="Image 2">
-                        <img class="slide" src="" alt="Image 3">
+                        <img class="slide" src="images/placeholderRectangle.png" alt="Image 1">
+                        <img class="slide" src="images/placeholderSquare.png" alt="Image 2">
                     </div>
-                    <button>&#10094</button>
-                    <button>&#10095</button>
+                    <button class="prev" onclick="prevSlide()">&#10094</button> <!-- buttons to change images -->
+                    <button class="next" onclick="nextSlide()">&#10095</button>
                 </div>
+                
+                <h3>Project Remixes</h3><br>
+                <div class="remixes"> <!-- project remixes -->
+                    <div class="gallery-item"> <!-- placeholder projects for now --> <!-- uses same styling as gallery items -->
+                        <img src="images/placeholderRectangle.png" alt="Project 1">
+                        <h4 class="project-title">Project 1</h4>
+                        <p class="project-creator">by Creator Name</p>
+                    </div>
 
+                    <div class="gallery-item">
+                        <img src="images/placeholderSquare.png" alt="Project 2">
+                        <h4 class="project-title">Project 2</h4>
+                        <p class="project-creator">by Creator Name</p>
+                    </div>
+
+                    <div class="gallery-item"> 
+                        <img src="images/placeholderRectangle.png" alt="Project 3">
+                        <h4 class="project-title">Project 3</h4>
+                        <p class="project-creator">by Creator Name</p>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/placeholderSquare.png" alt="Project 4">
+                        <h4 class="project-title">Project 4</h4>
+                        <p class="project-creator">by Creator Name</p>
+                    </div>
+                </div>
             </div>
 
             <div class="rightsection"> <!-- section for project detals -->
-                <p>here are details</p>
+                <h1>Title</h1>
+                <p><strong>Author: </strong></p>
+                <p><strong>Date Created: </strong></p>
+                <p><strong>File Types: </strong></p>
+                <p><strong>Tags: </strong></p>
+                
+                <button class="download">download</button>
+
+                <h3>Project Description</h3>
+                <p>Here lies the description of the project</p>
+
+                <h3>Machine Settings</h3>
+                <h4>Brand:</h4>
+                <h4>Machine Type:</h4>
+                <h4>Speed:</h3>
+                <h4>Stitch Height:</h4>
+                <h4>Carrier Configuration:</h4>
             </div>
         </div>
 
+
+        <script src="functions.js"></script>
         <div class="footer">
             © 2025 Knitrepo
         </div>
